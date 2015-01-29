@@ -2,11 +2,11 @@
 return array(
   // Setup view manager config
   'view_manager' => array(
-    'template_stack_path' => array(
-      __DIR__ . '/../view'
+    'template_path_stack' => array(
+      __DIR__ . '/../view',
     ),
   ),
-  
+
   // Start of Controller config
   'controllers' => array(
     'invokables' => array(
@@ -28,5 +28,5 @@ return array(
         ),
       ),
     ),
-  ), 
+  ),
 );
