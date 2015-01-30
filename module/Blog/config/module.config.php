@@ -1,5 +1,11 @@
 <?php
 return array(
+  // Service Manager
+  'service_manager' => array(
+    'invokables' => array(
+      'Blog\Service\PostServiceInterface' => 'Blog\Service\PostService',
+    ),
+  ),
   // Setup view manager config
   'view_manager' => array(
     'template_path_stack' => array(
@@ -9,8 +15,8 @@ return array(
 
   // Start of Controller config
   'controllers' => array(
-    'invokables' => array(
-      'Blog\Controller\List' => 'Blog\Controller\ListController'
+    'factories' => array(
+      'Blog\Controller\List' => 'Blog\Factory\ListControllerFactory'
     ),
   ),
 
